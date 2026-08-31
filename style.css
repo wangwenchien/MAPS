@@ -246,8 +246,7 @@ nav a:hover {
   color: #ffffff;
 
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   align-items: start;
 
@@ -262,6 +261,8 @@ nav a:hover {
 
   padding: 15px 30px;
 
+  overflow: hidden;
+
   border-right:
     1px solid rgba(255, 255, 255, 0.18);
 }
@@ -271,8 +272,11 @@ nav a:hover {
 }
 
 .feature-photo {
-  width: 120px;
-  height: 120px;
+  width: 120px !important;
+  height: 120px !important;
+
+  max-width: 120px !important;
+  max-height: 120px !important;
 
   display: block;
 
@@ -284,6 +288,8 @@ nav a:hover {
   border-radius: 50%;
 
   border: 3px solid rgba(255, 255, 255, 0.4);
+
+  flex-shrink: 0;
 }
 
 .feature h3 {
@@ -598,7 +604,7 @@ footer {
   }
 
   .features {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     padding: 38px 8%;
   }
@@ -608,8 +614,11 @@ footer {
   }
 
   .feature-photo {
-    width: 110px;
-    height: 110px;
+    width: 110px !important;
+    height: 110px !important;
+
+    max-width: 110px !important;
+    max-height: 110px !important;
   }
 
   .cards {
@@ -634,6 +643,7 @@ footer {
 
   .logo-area {
     height: 100px;
+
     padding-top: 28px;
   }
 
@@ -699,8 +709,11 @@ footer {
   }
 
   .feature-photo {
-    width: 105px;
-    height: 105px;
+    width: 105px !important;
+    height: 105px !important;
+
+    max-width: 105px !important;
+    max-height: 105px !important;
 
     margin-bottom: 14px;
   }
@@ -746,7 +759,10 @@ footer {
   }
 
   .feature-photo {
-    width: 95px;
-    height: 95px;
+    width: 95px !important;
+    height: 95px !important;
+
+    max-width: 95px !important;
+    max-height: 95px !important;
   }
 }
